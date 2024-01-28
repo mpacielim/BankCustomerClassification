@@ -78,6 +78,11 @@ However there was a tradeoff with precision which cause the accuracy to fall fro
 ## Next Steps and Recommendations
 Ultimately, the cleaning of data and tuning of hyperparameters showed promising improvements in the desired metric of recall, but further tuning is required to improve both recall and accuracy.
 
+Actions for further data gathering:
+- Given how the strong imbalance of data has clearly affected the model performance, it is recommended that more campaigns be run to:
+  - Increase the number of 'yes' candidates captured in the data, through more effective campaigns
+  - Review additional metrics that could be included in the new campaigns and gathered for use in improving model performance. 
+
 Suggestions from improvement include:
 - Performing gridsearch over a wider array of hyperparameters.
 - Specifically investigate the effect of changing probability thresholds and weighting of neighbouring samples, given the imbalance in the dataset.
