@@ -69,9 +69,9 @@ The models are again listed below in order of best to worst performance, with op
 - Best hyperparameters: C value = 1
 - This model also took by far the longest time to train, at 6 minutes compared with <1 minute for all other models.
 
-The best performing model in terms of accuracy was tied with the tuned Decision Tree Model and SVC, which both outperformed the baseline 88.5% accuracy with 89.9% accuracy, however with respective low recalls of 0.189 and 0.174.
+The best performing model in terms of accuracy was tied with the tuned Decision Tree Model and SVC, which both barely outperformed the baseline 88.5% accuracy with 89.9% accuracy, however with respective low recalls of 0.189 and 0.174.
 
-The best recall value increased by 620, meaning that the number of correctly identified 'yes' candidates increased from 126 (10.7% of total 'yes' customers) to 681 (62%), and the number of yes candidates who were incorrectly identified as a 'no' dropped from 1,057 (89.3%) to 417 (38%).
+The best performing recall model (the Tuned Logistic Regression model) increased from the best performing Non-Tuned Model (Decision Tree) from a recall of 0.106 to 0.620.  This means that the number of correctly identified 'yes' candidates increased from 126 (10.7% of total 'yes' customers) to 681 (62%), and the number of yes candidates who were incorrectly identified as a 'no' dropped from 1,057 (89.3%) to 417 (38%).
 
 However there was a tradeoff with precision which cause the accuracy to fall from the baseline of 88.5% to 71.6%.
 
