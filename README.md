@@ -85,4 +85,5 @@ Suggestions from improvement include:
 
 ## Links
 [Link to Dataset](https://github.com/mpacielim/BankCustomerClassification/tree/main/data)
+
 [Link to Technical Report](https://github.com/mpacielim/BankCustomerClassification/blob/main/Bank%20Customer%20Classifier.ipynb)
