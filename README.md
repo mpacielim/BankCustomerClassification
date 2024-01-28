@@ -52,7 +52,7 @@ Additionally, the data fed to the model was investigated and cleaned thoroughly 
 - Encode ordinal and nominal category data
 - Remove nonsensical data (such as duration, as recommended by the dataset description)
 
-This led to the following far improved results for recall, but varying for accuracy.
+This led to the following far improved results for recall, but varying for accuracy. 
 
 The models are again listed below in order of best to worst performance, with optimal hyperparameters listed:
 
@@ -65,11 +65,13 @@ The models are again listed below in order of best to worst performance, with op
 3. Decision Tree 2: 0.187 recall, 0.899 accuracy
 - Best hyperparameters: criterion = 'gini', max_depth = 7, min_samples_split = 5
 
-4. SVC 2: recall, accuracy
-- Best hyperparameters: 
+4. SVC 2: 0.174 recall, 0.898 accuracy
+- Best hyperparameters: C value = 1
+- This model also took by far the longest time to train, at 6 minutes compared with <1 minute for all other models.
 
+The best performing model in terms of accuracy was tied with the tuned Decision Tree Model and SVC, which both outperformed the baseline 88.5% accuracy with 89.9% accuracy, however with respective low recalls of 0.189 and 0.174.
 
-The best recall value increased by 620, meaning that the number of correctly identified 'yes' candidates increased from xx to xx, and the number of yes candidates who were incorrectly identified as a 'no' dropped from xx to xx.
+The best recall value increased by 620, meaning that the number of correctly identified 'yes' candidates increased from 126 (10.7% of total 'yes' customers) to 681 (62%), and the number of yes candidates who were incorrectly identified as a 'no' dropped from 1,057 (89.3%) to 417 (38%).
 
 However there was a tradeoff with precision which cause the accuracy to fall from the baseline of 88.5% to 71.6%.
 
@@ -82,5 +84,5 @@ Suggestions from improvement include:
 - Incorporating ensemble methods or neural networks to improve performance.
 
 ## Links
-[Link to Data]()
-[Link to Technical Report]()
+[Link to Dataset](https://github.com/mpacielim/BankCustomerClassification/tree/main/data)
+[Link to Technical Report](https://github.com/mpacielim/BankCustomerClassification/blob/main/Bank%20Customer%20Classifier.ipynb)
