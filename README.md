@@ -13,13 +13,13 @@ The business objective of the modelling was to determine which attributes of a c
 The dataset was highly imbalanced towards 'no' answers, with ~89% of customers responding no, and the remaining 11% responding yes.
 
 ## Evaluation Rationale
-A rudimentary baseline score of 89% accuracy was set.  This score is what a model that simply assigned all customers to a 'no' answer (the majority class). The goal of a well performing model is to achieve an accuracy > 89%.
+A rudimentary baseline score of 89% accuracy was set.  This score is what a model that simply assigned all customers to a 'no' answer (the majority class) would achieve. The goal of a well performing model is to achieve an accuracy > 89%.
 
 However, given the high imbalance in the dataset, choosing the best model based on accuracy is not wise, as this measures the total number of correct predictions only, including both 'no' and 'yes' answers.  
 
 In this business context, we want to correctly identify as many potential customers that will say yes to opening a deposit account.
 
-In this binary dataset, the Positive classifier 1 = yes, to opening an account, while the Negative classifier 0 = no.  This means that we value identifying a True Positives, and want to avoid False Negatives (this would mean a potential deposit customer was classified as a 'No', and the bank would not reach out to a successful candidate).  In this case we want to **maximize Recall**, which is the measure of:
+In this binary dataset, the Positive classifier 1 = yes, to opening an account, while the Negative classifier 0 = no.  This means that we value identifying a True Positives, and want to avoid False Negatives (this would mean a potential deposit customer was classified as a 'No', and the bank would have missed identifying and reaching out to a successful candidate).  In this case we want to **maximize Recall**, which is the measure of:
 
 - (True Positives) \ (True Positives + False Negatives)
 
@@ -62,10 +62,10 @@ The models are again listed below in order of best to worst performance, with op
 2. KNN 2: 0.214 recall, 0.875 accuracy
 - Best hyperparameters: n_neighbors = 3, weights = 'distance'
 
-3. Decision Tree 2: 0.187 recall, 0.899 accuracy
+3. Decision Tree 2: 0.189 recall, 0.899 accuracy
 - Best hyperparameters: criterion = 'gini', max_depth = 7, min_samples_split = 5
 
-4. SVC 2: 0.174 recall, 0.898 accuracy
+4. SVC 2: 0.174 recall, 0.899 accuracy
 - Best hyperparameters: C value = 1
 - This model also took by far the longest time to train, at 6 minutes compared with <1 minute for all other models.
 
